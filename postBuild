@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+# Enable Jupyter extensions
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter labextension install jupyter-leaflet
+
+# Download sample NSW boundary data (optional)
+mkdir -p data
+# wget -q -O data/nsw_lga.geojson "YOUR_DATA_URL"
+
+echo "Build complete!"
